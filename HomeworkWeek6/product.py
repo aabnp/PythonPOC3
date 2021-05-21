@@ -26,7 +26,7 @@ class Product():
 class Book(Product):
     MIN_PAGES = 20
 
-    def __init__(self,product_id, product_name, price, author: str, pages: int):
+    def __init__(self, product_id, product_name, price, author: str, pages: int):
         print('BOOK CONSTRUCTOR')
         super().__init__(product_id, product_name, price)
         if not author:
