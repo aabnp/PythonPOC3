@@ -1,14 +1,14 @@
 import json
 
 
-class Product():
+class Product:
     MIN_PRODUCT_NAME_LENGTH = 5
     MIN_PRICE = 1.00
 
     def __init__(self, product_id: int, product_name: str, price: float):
         print('PRODUCT CONSTRUCTOR')
         self.product_id = product_id
-        if len(product_name)<self.MIN_PRODUCT_NAME_LENGTH:
+        if len(product_name) < self.MIN_PRODUCT_NAME_LENGTH:
             raise Exception(f'Error: product name too short should be at least {self.MIN_PRODUCT_NAME}') 
         self.product_name = product_name.title()
         if price < self.MIN_PRICE:
@@ -48,7 +48,7 @@ class Book(Product):
 
 
 if __name__ ==  "__main__":
-    my_product = Product(1, 'nivea cream', 5.00)
+    my_product = Product(1, 'Hamlet', 5.00)
     print(my_product)
-    book = Book(2, 'Nivea cream', 5, 'Shakespeare', 120)
+    book = Book(2, 'Hamlet', 5, 'Shakespeare', 120)
     print(book)
